@@ -1,0 +1,15 @@
+<a href="/add-mahasiswa">Tambah Mahasiswa</a>
+<h1>Mahasiswa</h1>
+<ol>
+<% mahasiswas.forEach(function(mahasiswa){ %> 
+    <li>
+        <p>Nim: <%= mahasiswa.value.nim %></p>
+        <p>Nama: <%= mahasiswa.value.nama %></p>
+        <form method="post" action="/delete/<%= mahasiswa.key %>">
+            <input type="hidden" value="<%= mahasiswa.value.rev %>" name="rev">
+            <input type="submit" value="X">
+        </form>
+        <a href="/edit/<%= mahasiswa.key %>">Edit</a>
+    </li>
+<% }) %> 
+</ol>
