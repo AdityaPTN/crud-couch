@@ -1,9 +1,11 @@
-<h1>Edit Mahasiswa</h1>
-<form method="post" action="/edit/<%= mahasiswa._id %>">
-    <input type="text" name="nim" placeholder="<%= mahasiswa.nim %>">
-    <input type="text" name="nama" placeholder="<%= mahasiswa.nama %>">
-    <input type="hidden" name="_id" value="<%= mahasiswa._id %>">
-    <input type="hidden" name="_rev" value="<%= mahasiswa._rev %>">
-    <input type="submit" value="Submit">
-</form>
-<a href="/">Back</a>
+<div style="text-align: center; margin: 30vh 35vw; border-style: solid; border-width: 1px;">
+    <h1>Edit Mahasiswa</h1>
+    <form method="post" action="/edit/<%= mahasiswa._id %>">
+        <input type="text" name="nim" value="<%= mahasiswa.nim %>">
+        <input type="text" name="nama" value="<%= mahasiswa.nama %>">
+        <input type="hidden" name="_id" value="<%= mahasiswa._id %>">
+        <input type="hidden" name="_rev" value="<%= mahasiswa._rev %>">
+        <input type="submit" value="Submit">
+    </form>
+    <a style="padding-bottom: 10px;" href="/">Back</a>
+</div>

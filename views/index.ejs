@@ -1,15 +1,40 @@
-<a href="/add-mahasiswa">Tambah Mahasiswa</a>
-<h1>Mahasiswa</h1>
-<ol>
-<% mahasiswas.forEach(function(mahasiswa){ %> 
-    <li>
-        <p>Nim: <%= mahasiswa.value.nim %></p>
-        <p>Nama: <%= mahasiswa.value.nama %></p>
-        <form method="post" action="/delete/<%= mahasiswa.key %>">
-            <input type="hidden" value="<%= mahasiswa.value.rev %>" name="rev">
-            <input type="submit" value="X">
+<head>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <span style="font-size: 30px; font-weight:bold;">Mahasiswa</span>
+    </div>
+    <div style="display: flex; margin: 10px 3vw;">
+        <span style="margin-left:auto; margin-right: 10px;">Tambah Mahasiswa </span>
+        <form method="post" action="/add-mahasiswa">
+            <input type="text" name="nim" placeholder="Masukkan NIM" required>
+            <input type="text" name="nama" placeholder="Masukkan Nama" required>
+            <input type="submit" value="Submit">
         </form>
-        <a href="/edit/<%= mahasiswa.key %>">Edit</a>
-    </li>
-<% }) %> 
-</ol>
+    </div>
+    <table>
+        <tr>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th style="width: 12%;">Action</th>
+        </tr>
+        <% mahasiswas.forEach(function(mahasiswa){ %>
+        <tr>
+            <td><%= mahasiswa.value.nim %></td>
+            <td><%= mahasiswa.value.nama %></td>
+            <td>
+                <form method="post" action="/delete/<%= mahasiswa.key %>">
+                    <input type="hidden" value="<%= mahasiswa.value.rev %>" name="rev">
+                    <input type="submit" value="Hapus">
+                    <a href="/edit/<%= mahasiswa.key %>">Edit</a>
+                </form>
+            </td>
+        </tr>
+        <% }) %>
+    </table>
+</body>
+
+</html>
