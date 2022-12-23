@@ -17,7 +17,7 @@ Download [CouchDB](https://couchdb.apache.org/)
 Command dalam terminal
 ```
 git clone https://github.com/AdityaPTN/crud-couch.git
-npm app.js
+node app
 ```
 
 # Setup Connection to Database
