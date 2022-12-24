@@ -5,7 +5,7 @@ Kelompok 4 Manajemen Basis Data Kelas A
 <li> Aldi Fahluzi Muharam <strong>1207050008</strong></li>
 <li> Alifia Nadiva Altafunnisa <strong>1207050012</strong></li>
 </ol>
-Link Video Youtube :
+Link Video Youtube : https://youtu.be/oWe_EU8Qji4
 
 # Instalasi CouchDB
 Download [CouchDB](https://couchdb.apache.org/)
@@ -148,3 +148,22 @@ app.post("/delete/:id", (req, res) => {
   );
 });
 ```
+
+# Screenshot
+### Tampilan Awal
+![image](https://user-images.githubusercontent.com/63549230/209420173-fa56989d-6f13-42e4-8b28-a6f42edbb119.png)
+
+### Saat Submit 2 Data
+![image](https://user-images.githubusercontent.com/63549230/209420192-e8d00ce5-786c-47f1-a29c-bcb5680ce948.png)
+
+### Tampilan Edit Data
+![image](https://user-images.githubusercontent.com/63549230/209420205-2de3a0dd-9dba-4722-9b8e-2ac1899e5cf2.png)
+
+### Tampilan Setelah Edit Data
+![image](https://user-images.githubusercontent.com/63549230/209420229-f957c91d-578e-4380-bb5c-fff2f768b74c.png)
+
+### Tampilan Setelah dihapus satu data
+![image](https://user-images.githubusercontent.com/63549230/209420245-1559b9ae-dacc-4c23-afda-dcf5cca403ea.png)
+
+
+# Terima Kasih
