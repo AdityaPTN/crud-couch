@@ -10,22 +10,24 @@ app.listen(3000, () => {
   console.log("Server started on 3000 Port");
 });
 app.use(express.static(__dirname + "/public"));
+
+
 //Koneksivitas
 const NodeCouchDb = require("node-couchdb");
 const couch = new NodeCouchDb({
   auth: {
-    user: "admin",
-    pass: "123",
+    user: "YOUR_USERNAME",
+    pass: "YOUR_PASSWORD",
   },
 });
-const dbName = "mahasiswas";
-const viewUrl = "_design/all_mahasiswas/_view/all";
+const dbName = "YOUR_COLLECTION";
+const viewUrl = "YOUR_VIEW_URL";
 
 couch.listDatabases().then(function (dbs) {
   console.log(dbs);
 });
 
-//Routing
+
 //Read
 app.get("/", (req, res) => {
   couch.get(dbName, viewUrl).then(
