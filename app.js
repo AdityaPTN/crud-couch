@@ -14,8 +14,8 @@ app.use(express.static(__dirname + "/public"));
 const NodeCouchDb = require("node-couchdb");
 const couch = new NodeCouchDb({
   auth: {
-    user: "admin",
-    pass: "123",
+    user: "alifiana",
+    pass: "alifiana123",
   },
 });
 const dbName = "mahasiswas";
